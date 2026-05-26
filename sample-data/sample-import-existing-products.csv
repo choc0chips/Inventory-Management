@@ -1,0 +1,9 @@
+sku,productName,category,supplier,productType,unit,costPrice,price,movementType,quantity,note,date
+ELEC-SPK-001,Wireless Bluetooth Speaker,Electronics,TechDistro Inc.,TRADING,pcs,28.50,49.99,RESTOCK,25,Additional speaker stock from supplier,2026-05-01
+ELEC-CBL-002,USB-C Charging Cable 2m,Electronics,TechDistro Inc.,TRADING,pcs,4.20,12.99,SALE,30,Wholesale cable order fulfilled,2026-05-02
+OFFC-PPR-001,A4 Copy Paper (500 sheets),Office Supplies,PrimeStock Solutions,CONSUMABLE,reams,3.50,6.99,PURCHASE,50,Paper restock for Q2,2026-05-03
+FURN-CHR-001,Ergonomic Office Chair,Furniture,GlobalParts Ltd.,ASSET,pcs,210.00,349.99,SALE,2,Client office setup delivery,2026-05-04
+RAW-BLT-001,Steel Bolts M8x50 (Pack 100),Raw Materials,EcoSupply Co.,TRADING,packs,12.40,24.99,RETURN,15,Returned unused bolts from project,2026-05-05
+CLN-CLT-002,Microfiber Cleaning Cloths (10pk),Cleaning Supplies,EcoSupply Co.,CONSUMABLE,packs,4.20,9.99,PURCHASE,40,Restock out-of-stock cleaning cloths,2026-05-06
+ELEC-MOU-004,Wireless Mouse Ergonomic,Electronics,TechDistro Inc.,TRADING,pcs,14.50,29.99,ADJUSTMENT,-3,Inventory audit correction,2026-05-07
+OFFC-STK-003,Sticky Notes (12 pads),Office Supplies,PrimeStock Solutions,CONSUMABLE,packs,3.80,8.99,RESTOCK,20,Sticky notes replenishment,2026-05-08

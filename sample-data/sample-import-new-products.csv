@@ -1,0 +1,7 @@
+sku,productName,category,supplier,productType,unit,costPrice,price,movementType,quantity,note,date
+PKG-BOX-001,Shipping Box Medium,Packaging,Pacific Pack Co.,CONSUMABLE,pcs,1.20,2.99,PURCHASE,500,New packaging category and supplier,2026-05-10
+PKG-TPE-002,Bubble Wrap Roll 100m,Packaging,Pacific Pack Co.,CONSUMABLE,rolls,8.00,15.99,RESTOCK,80,Second product same new supplier,2026-05-11
+SAF-GLV-001,Cut-Resistant Gloves,Safety Gear,NorthGuard Safety,TRADING,pairs,6.50,14.99,PURCHASE,120,New safety gear category,2026-05-12
+SAF-GLS-002,Safety Goggles Clear,Safety Gear,NorthGuard Safety,TRADING,pcs,4.00,9.50,SALE,25,Initial stock then sale,2026-05-13
+KIT-EMG-001,Office Emergency Kit,Office Supplies,,CONSUMABLE,kits,18.00,34.99,PURCHASE,15,New product no supplier assigned,2026-05-14
+KIT-FST-002,First Aid Refill Pack,Safety Gear,NorthGuard Safety,CONSUMABLE,packs,12.00,24.99,RETURN,5,Customer return on new SKU,2026-05-15

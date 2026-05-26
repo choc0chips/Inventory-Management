@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-26T14:48:00.000Z",
+  "title": "Design System: StockWise",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Clear Indigo",
+        "canonical": "oklch(0.62 0.185 285)",
+        "tonalRamp": ["oklch(0.15 0.03 285)", "oklch(0.25 0.06 285)", "oklch(0.35 0.1 285)", "oklch(0.45 0.14 285)", "oklch(0.55 0.17 285)", "oklch(0.62 0.185 285)", "oklch(0.72 0.14 285)", "oklch(0.88 0.06 285)"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Pale Mist",
+        "canonical": "oklch(0.97 0.003 260)",
+        "tonalRamp": ["oklch(0.15 0.005 260)", "oklch(0.3 0.005 260)", "oklch(0.45 0.005 260)", "oklch(0.6 0.005 260)", "oklch(0.75 0.005 260)", "oklch(0.85 0.005 260)", "oklch(0.93 0.005 260)", "oklch(0.97 0.003 260)"]
+      },
+      "neutral-fg": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "oklch(0.2 0.02 260)",
+        "tonalRamp": ["oklch(0.15 0.02 260)", "oklch(0.2 0.02 260)", "oklch(0.3 0.02 260)", "oklch(0.45 0.02 260)", "oklch(0.6 0.02 260)", "oklch(0.75 0.02 260)", "oklch(0.85 0.02 260)", "oklch(0.95 0.02 260)"]
+      },
+      "destructive": {
+        "role": "error",
+        "displayName": "Alert Red",
+        "canonical": "oklch(0.55 0.2 25)",
+        "tonalRamp": ["oklch(0.15 0.04 25)", "oklch(0.25 0.08 25)", "oklch(0.35 0.12 25)", "oklch(0.45 0.16 25)", "oklch(0.55 0.2 25)", "oklch(0.65 0.16 25)", "oklch(0.78 0.1 25)", "oklch(0.9 0.04 25)"]
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "displayName": "Body",
+        "purpose": "Primary reading text, table cells, form labels"
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title headings (Products, Categories, etc.)"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Badge text, table column headers, chip labels"
+      }
+    },
+    "shadows": [
+      { "name": "card-rest", "value": "0 1px 2px 0 rgba(0,0,0,0.05)", "purpose": "Default card elevation" },
+      { "name": "card-hover", "value": "0 4px 6px -1px rgba(0,0,0,0.1)", "purpose": "Card hover state" },
+      { "name": "dialog", "value": "0 10px 15px -3px rgba(0,0,0,0.1)", "purpose": "Modal/dialog elevation" }
+    ],
+    "motion": [
+      { "name": "theme-transition", "value": "background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease", "purpose": "Theme switch transition on major surfaces" },
+      { "name": "interactive-transition", "value": "all 0.2s ease", "purpose": "Button, link, input hover/focus transitions" },
+      { "name": "hover-lift", "value": "transform 0.3s ease-out", "purpose": "Card hover lift animation" },
+      { "name": "sidebar-slide", "value": "transform 0.3s ease-in-out", "purpose": "Mobile sidebar slide animation" }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action. Indigo surface, white text, 10px radius.",
+      "html": "<button class=\"ds-btn-primary\">Add Product</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 32px; padding: 4px 10px; border-radius: 10px; border: 1px solid transparent; background: #6366f1; color: #fff; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; transition: all 0.2s ease; cursor: pointer; outline: none; } .ds-btn-primary:hover { background: rgba(99,102,241,0.8); } .ds-btn-primary:focus-visible { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.5); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action. Transparent with border stroke.",
+      "html": "<button class=\"ds-btn-outline\">Cancel</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; height: 32px; padding: 4px 10px; border-radius: 10px; border: 1px solid #e2e8f0; background: transparent; color: #0f172a; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; white-space: nowrap; transition: all 0.2s ease; cursor: pointer; outline: none; } .ds-btn-outline:hover { background: #f1f5f9; } .ds-btn-outline:focus-visible { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.5); } .ds-btn-outline:active { transform: translateY(1px); } .ds-btn-outline:disabled { opacity: 0.5; pointer-events: none; } .dark .ds-btn-outline { border-color: #1e293b; color: #f8fafc; } .dark .ds-btn-outline:hover { background: #1e293b; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form input field. Transparent surface, border stroke, indigo focus ring.",
+      "html": "<input class=\"ds-input\" placeholder=\"Search products...\" type=\"text\" />",
+      "css": ".ds-input { display: flex; height: 32px; width: 100%; min-width: 0; padding: 4px 10px; border-radius: 10px; border: 1px solid #e2e8f0; background: transparent; color: #0f172a; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; line-height: 1.5; outline: none; transition: all 0.2s ease; } .ds-input::placeholder { color: #64748b; } .ds-input:focus { border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.5); } .ds-input:disabled { opacity: 0.5; pointer-events: none; background: rgba(241,245,249,0.5); } .dark .ds-input { border-color: #1e293b; color: #f8fafc; } .dark .ds-input::placeholder { color: #94a3b8; } .dark .ds-input:focus { border-color: #818cf8; box-shadow: 0 0 0 3px rgba(129,140,248,0.5); }"
+    },
+    {
+      "name": "Default Badge",
+      "kind": "chip",
+      "refersTo": "badge-default",
+      "description": "Status badge. Indigo surface, pill-shaped, compact.",
+      "html": "<span class=\"ds-badge-default\">In Stock</span>",
+      "css": ".ds-badge-default { display: inline-flex; align-items: center; justify-content: center; height: 20px; padding: 2px 8px; border-radius: 40px; border: 1px solid transparent; background: #6366f1; color: #fff; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; white-space: nowrap; line-height: 1; transition: all 0.2s ease; }"
+    },
+    {
+      "name": "Secondary Badge",
+      "kind": "chip",
+      "refersTo": "badge-secondary",
+      "description": "Secondary status badge. Muted slate surface.",
+      "html": "<span class=\"ds-badge-secondary\">Draft</span>",
+      "css": ".ds-badge-secondary { display: inline-flex; align-items: center; justify-content: center; height: 20px; padding: 2px 8px; border-radius: 40px; border: 1px solid transparent; background: #f1f5f9; color: #0f172a; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; white-space: nowrap; line-height: 1; transition: all 0.2s ease; } .dark .ds-badge-secondary { background: #1e293b; color: #f8fafc; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "KPI or section card. 10px or 14px radius, shadow-sm resting, lifts on hover.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-value\">$24,580</div><div class=\"ds-card-label\">Inventory Value</div></div>",
+      "css": ".ds-card { position: relative; overflow: hidden; border-radius: 14px; border: 1px solid #e2e8f0; background: #ffffff; padding: 20px; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); transition: all 0.3s ease-out; } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); } .ds-card-value { font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: #0f172a; letter-spacing: -0.02em; } .ds-card-label { margin-top: 4px; font-size: 0.75rem; font-weight: 500; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; } .dark .ds-card { border-color: #1e293b; background: #0f1524; } .dark .ds-card-value { color: #f8fafc; } .dark .ds-card-label { color: #94a3b8; }"
+    },
+    {
+      "name": "Table",
+      "kind": "custom",
+      "refersTo": "table",
+      "description": "Data table with header and bordered rows.",
+      "html": "<div style=\"overflow-x:auto\"><table class=\"ds-table\"><thead><tr><th class=\"ds-th\">Product</th><th class=\"ds-th\">SKU</th><th class=\"ds-th\">Qty</th><th class=\"ds-th\" style=\"text-align:right\">Price</th></tr></thead><tbody><tr class=\"ds-tr\"><td class=\"ds-td\">Widget Alpha</td><td class=\"ds-td\">WGT-001</td><td class=\"ds-td\">42</td><td class=\"ds-td\" style=\"text-align:right\">$12.99</td></tr><tr class=\"ds-tr\"><td class=\"ds-td\">Gadget Beta</td><td class=\"ds-td\">GDT-002</td><td class=\"ds-td\">7</td><td class=\"ds-td\" style=\"text-align:right\">$24.50</td></tr></tbody></table></div>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; color: #0f172a; font-family: Inter, ui-sans-serif, system-ui, sans-serif; } .ds-th { height: 40px; padding: 0 8px; text-align: left; vertical-align: middle; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; white-space: nowrap; } .ds-tr { border-bottom: 1px solid #e2e8f0; transition: background-color 0.2s ease; } .ds-tr:hover { background: rgba(241,245,249,0.5); } .ds-td { padding: 8px; vertical-align: middle; white-space: nowrap; } .dark .ds-table { color: #f8fafc; } .dark .ds-th { color: #94a3b8; } .dark .ds-tr { border-bottom-color: #1e293b; } .dark .ds-tr:hover { background: rgba(30,41,59,0.5); }"
+    },
+    {
+      "name": "Sidebar Nav Link",
+      "kind": "nav",
+      "refersTo": "sidebar",
+      "description": "Navigation link in the fixed dark sidebar.",
+      "html": "<nav style=\"background:#0f172a; padding:8px; border-radius:8px; width:180px; font-family:Inter,ui-sans-serif,system-ui,sans-serif;\"><a class=\"ds-nav-link ds-nav-active\" href=\"#\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"margin-right:8px\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"/></svg>Products</a><a class=\"ds-nav-link\" href=\"#\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"margin-right:8px\"><path d=\"M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z\"/><path d=\"m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9\"/><path d=\"M12 3v6\"/></svg>Categories</a></nav>",
+      "css": ".ds-nav-link { display: flex; align-items: center; padding: 10px 12px; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: #94a3b8; text-decoration: none; transition: all 0.2s ease; } .ds-nav-link:hover { background: rgba(30,41,59,0.5); color: #ffffff; } .ds-nav-active { background: linear-gradient(to right, rgba(99,102,241,0.1), rgba(139,92,246,0.1), transparent); color: #ffffff; border-left: 2px solid #6366f1; box-shadow: 0 1px 2px 0 rgba(99,102,241,0.05); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Inventory Desk",
+    "overview": "StockWise is a clear, efficient workspace for small business owners who need to understand their inventory health and act on it without friction. The interface is quiet but precise: light slate neutrals carry the structure, while indigo appears sparingly as a functional signal (primary actions, focus indicators, active state). Every surface is theme-aware by default, switching between a bright airy light mode and a deep navy dark mode with the same indigo anchor.\n\nThe system explicitly rejects overstyled dashboards, heavy gradients, decorative glassmorphism, and anything that looks like a generic admin template. Data is the hero. Cards rest on subtle shadows with gentle hover lifts. Tables are lean and scrollable. Modals appear only after inline alternatives are exhausted.",
+    "keyCharacteristics": [
+      "Clean, airy slate background with a single indigo accent used sparingly (under 10% of any screen)",
+      "Cards on a flat surface with subtle shadows and purposeful hover elevation",
+      "Uniform border radius cascade: 10px for inputs, buttons, and KPI cards; 14px for section containers; pill for badges",
+      "Indigo focus ring (3px, 50% opacity) as the universal interactive indicator",
+      "Fully theme-adaptive: every color token switches between light and dark variants"
+    ],
+    "rules": [
+      { "name": "The Indigo Signal Rule", "body": "The indigo accent (#6366f1) is reserved for interactive signaling. It appears on primary buttons, focus rings, active nav links, and hover glows. It does not appear on static decorative elements. If indigo is on a surface, that surface is actionable or focused.", "section": "colors" },
+      { "name": "The No-Hierarchy-Via-Font Rule", "body": "One font family. Every hierarchy step is a combination of size, weight, and (for labels) letter-spacing. No serif, no mono, no decorative typefaces. The typography gets out of the way.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are at rest on the same plane. Shadows appear only as a response to state (hover, focus, elevated context). No decorative shadows on static elements.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the indigo accent exclusively for interactive signaling (buttons, focus rings, active nav).",
+      "Do keep cards visually flat at rest; let their border and background define the surface, not a shadow.",
+      "Do apply the radius cascade consistently: 10px for inputs and buttons, 14px for section containers, pill for badges.",
+      "Do use muted foreground (#64748b / #94a3b8) for secondary text, metadata, and placeholder content.",
+      "Do make every component theme-aware by using CSS variable tokens."
+    ],
+    "donts": [
+      "Don't use hardcoded color values (text-slate-900, bg-white) that break in dark mode.",
+      "Don't use gradient text (background-clip: text with gradient). Emphasis comes from weight and size.",
+      "Don't use side-stripe borders (colored border-left/border-right > 1px) on cards or list items.",
+      "Don't add decorative glassmorphism (blurred backgrounds on non-functional elements).",
+      "Don't use the hero-metric template (big number, small label, gradient accent).",
+      "Don't default to modals for every interaction. Exhaust inline and progressive patterns first.",
+      "Don't wrap everything in a container card. Let some content breathe on the bare background."
+    ]
+  }
+}

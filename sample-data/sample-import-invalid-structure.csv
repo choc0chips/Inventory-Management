@@ -1,0 +1,2 @@
+sku,productName,category,supplier,productType,unit,costPrice,price,movementType,quantity,note
+TEST-STRUCT-01,Structure Test Product,Electronics,TechDistro Inc.,TRADING,pcs,1.00,2.00,PURCHASE,1,Missing date column in header

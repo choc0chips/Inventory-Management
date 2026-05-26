@@ -1,0 +1,21 @@
+sku,productName,category,supplier,productType,unit,costPrice,price,movementType,quantity,note,date
+ELEC-HPH-101,Noise-Cancelling Headphones,Electronics,TechDistro Inc.,TRADING,pcs,45.00,89.99,PURCHASE,60,Initial warehouse stock,2025-11-05
+FURN-LMP-201,LED Desk Lamp,Furniture,GlobalParts Ltd.,ASSET,pcs,22.00,49.99,RESTOCK,25,Showroom replenishment,2025-11-12
+OFFC-NTB-301,Spiral Notebook A5,Office Supplies,PrimeStock Solutions,CONSUMABLE,packs,2.50,5.99,SALE,40,Office depot order,2025-11-18
+RAW-PLT-401,Plastic Pellets 25kg,Raw Materials,EcoSupply Co.,TRADING,bags,18.00,32.50,PURCHASE,100,Manufacturing batch,2025-12-01
+CLN-SPR-501,All-Purpose Spray 750ml,Cleaning Supplies,EcoSupply Co.,CONSUMABLE,bottles,3.20,7.49,RETURN,12,Customer return batch,2025-12-08
+ELEC-TAB-102,Tablet Stand Aluminum,Electronics,TechDistro Inc.,TRADING,pcs,8.50,19.99,RESTOCK,80,Retail channel restock,2025-12-15
+FURN-BKS-202,Bookshelf 5-Tier,Furniture,GlobalParts Ltd.,ASSET,pcs,95.00,189.99,SALE,3,Corporate furnishing order,2026-01-10
+OFFC-STR-302,Stapler Heavy Duty,Office Supplies,PrimeStock Solutions,CONSUMABLE,pcs,6.00,14.50,PURCHASE,50,Back-to-school supply,2026-01-22
+RAW-GLS-402,Tempered Glass Panel,Raw Materials,EcoSupply Co.,TRADING,sheets,42.00,78.00,ADJUSTMENT,-2,Inventory count correction,2026-02-03
+CLN-GLO-502,Rubber Gloves (100pk),Cleaning Supplies,EcoSupply Co.,CONSUMABLE,boxes,5.50,11.99,RESTOCK,30,Janitorial restock,2026-02-14
+ELEC-SSD-103,Portable SSD 1TB,Electronics,TechDistro Inc.,TRADING,pcs,55.00,99.99,SALE,15,Online flash sale,2026-02-20
+FURN-RUG-203,Conference Room Rug,Furniture,GlobalParts Ltd.,ASSET,pcs,120.00,249.99,PURCHASE,8,New office wing,2026-03-05
+OFFC-CRD-303,Index Cards 3x5,Office Supplies,PrimeStock Solutions,CONSUMABLE,packs,1.80,4.25,RETURN,20,Unused stock return,2026-03-12
+RAW-CBL-403,Industrial Cable 50m,Raw Materials,EcoSupply Co.,TRADING,rolls,32.00,58.00,RESTOCK,45,Production line supply,2026-03-18
+CLN-MOP-503,Wet Mop Refill Pack,Cleaning Supplies,,CONSUMABLE,packs,4.00,9.50,PURCHASE,35,No supplier on file yet,2026-03-25
+ELEC-CAM-104,Security Camera 4K,Electronics,TechDistro Inc.,ASSET,pcs,75.00,149.99,SALE,6,Facility upgrade,2026-04-02
+FURN-CAB-204,Filing Cabinet 4-Drawer,Furniture,GlobalParts Ltd.,ASSET,pcs,110.00,219.99,RESTOCK,10,Warehouse delivery,2026-04-09
+OFFC-TPE-304,Packaging Tape 48mm,Office Supplies,PrimeStock Solutions,CONSUMABLE,rolls,1.50,3.99,ADJUSTMENT,5,Found extra stock in back room,2026-04-15
+RAW-INS-404,Foam Insulation Board,Raw Materials,EcoSupply Co.,TRADING,sheets,28.00,52.00,PURCHASE,60,Construction project,2026-04-22
+CLN-BAG-504,Trash Bags Heavy Duty,Cleaning Supplies,EcoSupply Co.,CONSUMABLE,rolls,6.50,12.99,SALE,25,Monthly facilities order,2026-04-28

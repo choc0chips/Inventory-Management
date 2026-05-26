@@ -1,0 +1,9 @@
+sku,productName,category,supplier,productType,unit,costPrice,price,movementType,quantity,note,date
+,Missing SKU Product,Electronics,TechDistro Inc.,TRADING,pcs,10.00,19.99,PURCHASE,5,Empty SKU field,2025-10-01
+BAD-TYPE-01,Invalid Type Product,Office Supplies,PrimeStock Solutions,FOOD,pcs,5.00,9.99,RESTOCK,10,Invalid product type enum,2025-10-02
+BAD-MOVE-02,Invalid Movement Product,Furniture,GlobalParts Ltd.,ASSET,pcs,50.00,99.99,SHIPMENT,5,Invalid movement type enum,2025-10-03
+BAD-DATE-03,Invalid Date Product,Raw Materials,EcoSupply Co.,TRADING,packs,12.00,24.99,PURCHASE,10,Not a real date,not-a-date
+FORMULA-04,Formula Injection Test,Cleaning Supplies,EcoSupply Co.,CONSUMABLE,bottles,3.00,6.99,PURCHASE,1,Formula in SKU field,2025-10-05
+=CMD(),Injected Product Name,Electronics,,TRADING,pcs,1.00,2.00,SALE,1,CSV formula injection test,2025-10-06
+ZERO-QTY-05,Zero Adjustment Product,Office Supplies,PrimeStock Solutions,CONSUMABLE,boxes,4.00,8.99,ADJUSTMENT,0,Adjustment quantity cannot be zero,2025-10-07
+NEG-SALE-06,Negative Sale Quantity,Electronics,TechDistro Inc.,TRADING,pcs,20.00,39.99,SALE,-5,Sale requires positive quantity,2025-10-08

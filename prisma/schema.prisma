@@ -1,0 +1,87 @@
+// StockWise Inventory Management System
+// To switch to MySQL: change provider to "mysql" in both this file and prisma.config.ts
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product {
+  id            String          @id @default(cuid())
+  name          String
+  sku           String          @unique
+  productType   String
+  price         Float
+  costPrice     Float
+  quantity      Int             @default(0)
+  lowStockAlert Int             @default(10)
+  unit          String
+  categoryId    String
+  category      Category        @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  supplierId    String?
+  supplier      Supplier?       @relation(fields: [supplierId], references: [id], onDelete: SetNull)
+  movements     StockMovement[]
+  isArchived   Boolean        @default(false)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  products Product[]
+}
+
+model Supplier {
+  id       String    @id @default(cuid())
+  name     String
+  email    String
+  phone    String
+  address  String
+  products Product[]
+}
+
+model StockMovement {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  type      String
+  quantity  Int
+  note      String?
+  date      DateTime @default(now())
+}
+
+model User {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  email     String   @unique
+  password  String   // Stores securely hashed password strings (bcryptjs)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ImportBatch {
+  id         String      @id @default(cuid())
+  fileName   String
+  checksum   String      @unique
+  importedBy String
+  rowCount   Int
+  createdAt  DateTime    @default(now())
+  logs       ImportLog[]
+}
+
+model ImportLog {
+  id        String      @id @default(cuid())
+  batchId   String
+  batch     ImportBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  rowNumber Int
+  sku       String
+  action    String
+  status    String
+  message   String?
+  createdAt DateTime    @default(now())
+}
