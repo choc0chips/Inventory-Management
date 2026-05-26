@@ -660,6 +660,42 @@ Uses `.env` if present (Prisma config). Database file: `dev.db` at project root.
 
 ---
 
+## Conversation Summary (2026-05-26)
+
+This section summarizes the major design audit and polish session conducted on 2026-05-26.
+
+### Session Scope
+
+Full frontend audit of **StockWise** — every page and component was reviewed for UX, accessibility, visual design, theming, and consistency. The [`impeccable`](file:///C:/Users/Anusha/.agents/skills/impeccable/SKILL.md) skill was used to guide the polish pass.
+
+### Changes Made
+
+| Area | Change |
+|------|--------|
+| **Button** (`components/ui/button.tsx`) | Added mobile touch targets (`min-h-[44px]`), responsive desktop sizing (`md:h-8 md:px-2.5`), enhanced accessibility with `focus-visible:ring-3`, added `aria-invalid` variants, `shrink-0` on SVGs |
+| **Input** (`components/ui/input.tsx`) | Added mobile touch targets (`min-h-[44px]`), responsive desktop sizing (`md:h-8`), increased border radius (`rounded-md` → `rounded-lg`), enhanced focus ring (`focus-visible:ring-3`), added dark mode variants and `aria-invalid` support |
+| **Sidebar** (`components/layout/sidebar.tsx`) | Added mobile touch targets to theme toggle (`min-h-[44px] min-w-[44px] md:h-8 md:w-8`), updated active link styling from gradient border to solid `bg-primary/10` |
+| **Mobile Header** (`components/layout/mobile-header.tsx`) | Added mobile touch targets to menu toggle (`min-h-[44px] min-w-[44px] md:h-8 md:w-8`) |
+| **Product Client** (`components/products/product-client.tsx`) | Added mobile touch targets to action buttons, replaced gradient buttons with solid `bg-primary`, added `gap-1.5` to inline action groups |
+| **Category Client** (`components/categories/category-client.tsx`) | Same button/padding audit as products |
+| **Supplier Client** (`components/suppliers/supplier-client.tsx`) | Same button/padding audit as products |
+| **Import Client** (`components/import/import-client.tsx`) | Same button/padding audit |
+| **Dark mode headings** | All page `<h1>` headings updated to use `dark:text-indigo-300` for visible contrast in dark mode |
+| **Alerts page** | 17 hardcoded slate values → theme tokens, dark mode variants for icon containers |
+| **globals.css** | Transition property narrowed to composited-only (`color, background-color, border-color, box-shadow, opacity, transform`) to prevent layout thrashing |
+| **Focus rings** | All inputs across app unified to `focus-visible:ring-3 focus-visible:ring-ring/50` |
+| **Icon-text overlap** (current) | Removed `md:px-2.5` from base Input component — responsive padding was overriding `pl-10`/`pr-10` on desktop, causing absolute-positioned prefix/suffix icons to collide with input text in auth forms and product search |
+
+### Design System Decisions
+
+- **No gradients**: Replaced all gradient buttons with solid `bg-primary` per design system rules
+- **No backdrop blur on tables**: Flat data tables don't have decorative blur
+- **No side-stripe nav borders**: Active links use `bg-primary/10` instead
+- **Mobile-first touch targets**: 44px minimum on all interactive elements (<768px), compact `h-8` on desktop
+- **Light-theme-locked auth**: `/auth` page enforces light theme for brand consistency
+
+---
+
 ## Changelog
 
 ### 2026-05-26
@@ -681,6 +717,7 @@ Uses `.env` if present (Prisma config). Database file: `dev.db` at project root.
 - **Backdrop blur removed from table rows**: Removed `backdrop-blur-sm` from table header rows across `product-client.tsx`, `category-client.tsx`, and `reports-client.tsx` (2 instances). Flat data tables no longer have decorative blur per design system guidelines.
 - **Auth focus rings aligned**: Replaced `focus:ring-2 focus:ring-indigo-500/20` (2px, 20% opacity) with `focus-visible:ring-3 focus-visible:ring-ring/50` (3px, 50% opacity, keyboard-only) on all 5 auth form inputs, matching the app-wide focus ring pattern.
 - **Auth gradient buttons → solid primary**: Replaced `bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500` on login and register submit buttons with `bg-primary text-primary-foreground`, aligning with the design system's no-gradient rule.
+- **Icon-text overlap in auth inputs & product search**: Removed `md:px-2.5` from the base `Input` component (`components/ui/input.tsx:12`). The responsive padding was overriding explicit `pl-10`/`pr-10` classes on desktop via CSS cascade, causing absolute-positioned prefix icons (Mail, Lock, User, Search) to collide with input text. The fix restores the intended 40px left padding for icon-bearing inputs at all breakpoints.
 
 #### Added
 - **Premium Polished Homepage/Dashboard**: Major aesthetic and functional overhaul to elevate the operator interface:
