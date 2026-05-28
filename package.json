@@ -1,10 +1,11 @@
+```json
 {
   "name": "inventory",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "prisma generate && pnpm rebuild better-sqlite3",
+    "postinstall": "prisma generate",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
@@ -15,10 +16,8 @@
     "@base-ui/react": "^1.5.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.2",
-    "@prisma/adapter-better-sqlite3": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "bcryptjs": "^3.0.3",
-    "better-sqlite3": "^12.10.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.16.0",
@@ -51,10 +50,6 @@
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3"
-    ]
   }
 }
+```
